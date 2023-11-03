@@ -1,5 +1,5 @@
 <script>
-  import Download from "../../Download.svelte";
+  
   // add ID for card-front card-back in promp container
 
   let formData = {
@@ -235,7 +235,7 @@
 		<button>Download Back (PDF)</button>
 	  </a> -->
       <button on:click={closePrompt}>Close</button>
-      <Download />
+      
     </div>
   </div>
 {/if}
