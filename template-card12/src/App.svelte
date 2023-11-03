@@ -1,5 +1,5 @@
 <script>
-	import Download from "../../../Download.svelte";
+	
 	let formData = {
 	  company: "Company",
 	  tagline: "One Stop Solution",
@@ -476,7 +476,7 @@
 		  </div>
 	  </div>
 	  <button on:click={closePrompt}>Close</button>
-	  <Download />
+	
 	</div>
   </div>
   {/if}
