@@ -1,16 +1,15 @@
 <script>
 	
-;
-  // add ID for card-front card-back in promp container
 	let formData = {
-	  company: "Healthcare",
-	  services: "Medical Services",
-	  website: "www.google.com",
-	  name: "Dr Krishna",
-	  designation: "MBBS ,MD ",
-	  phoneNumber: "1234567890",
+	  company: "Company",
+	  tagline: "One Stop Solution",
+	  website: "Website",
+	  name: "James Bond",
+	  designation: "Product Manager",
+	  phoneNumber: "PhoneNumber",
 	  email: "Email@gmail.com",
 	  address: "Address",
+	  
 	};
   
 	let showPrompt = false;
@@ -95,8 +94,6 @@
 	.prompt-content .business-card-back {
 	  width: 300px;
 	  height: 200px;
-	  border: 1px solid #1ca46f;
-	  background-color: lightblue;
 	  font-family: 'Times New Roman', Times, serif;
 	  display: flex;
 	  flex-direction: column;
@@ -108,16 +105,16 @@
 	.preview-section .business-card-back:hover,
 	.prompt-content .business-card-front:hover,
 	.prompt-content .business-card-back:hover {
-	  background-color: lightcoral;
+	  background-color: #012531;
 	}
-
+  
 	.prompt {
-	  position:fixed;
+	  position: fixed;
 	  top: 0;
 	  left: 0;
 	  width: 100%;
 	  height: 100%;
-	  display:flex;
+	  display: flex;
 	  justify-content: center;
 	  align-items: center;
 	  background-color: rgba(0, 0, 0, 0.7);
@@ -130,396 +127,307 @@
 	  text-align: center;
 	}
 
-    :root {
-      /* fonts */
-      --font-amiko: Amiko;
+	:root {
+  /* fonts */
+  --font-dm-serif-display: "DM Serif Display";
+  --font-playfair-display: "Playfair Display";
 
-      /* font sizes */
-      --font-size-2xs-3: 10.3px;
-      --font-size-lg-3: 18.3px;
-      --font-size-3xs-1: 9.1px;
+  /* font sizes */
+  --font-size-xs: 12px;
 
-      /* Colors */
-      --color-mediumseagreen: #1ca46f;
-      --color-white: #fff;
-      --color-darkslateblue: #3b308b;
-      --color-gray: rgba(255, 255, 255, 0.1);
+  /* Colors */
+  --color-gray: #012531;
+  --color-burlywood-100: #dcb86f;
+  --color-burlywood-200: #dcb76d;
 
-      /* Border radiuses */
-      --br-11xs: 2px;
-    }
+  /* Gaps */
+  --gap-mini: 15px;
 
-    @keyframes flip-horizontal-bottom {
-      0% {
-        transform: rotateX(0);
-      }
+  /* Border radiuses */
+  --br-xl: 20px;
+}
 
-      to {
-        transform: rotateX(-180deg);
-      }
-    }
+/* back css */
+.back12-child {
+  position: absolute;
+  top: calc(50% - 74px);
+  left: calc(50% - 67px);
+  border-right: 1px solid var(--color-burlywood-100);
+  box-sizing: border-box;
+  width: 1px;
+  height: 147px;
+}
+.logo-icon {
+  position: absolute;
+  top: calc(50% - 20.5px);
+  left: 9px;
+  width: 66.67px;
+  height: 39.24px;
+  object-fit: cover;
+}
+.james-bond,
+.product-manager {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 157px;
+  flex-shrink: 0;
+}
+.james-bond {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  height: 24px;
+}
+.product-manager {
+  font-size: 13px;
+  height: 15px;
+}
+.nameposition {
+  position: absolute;
+  top: 27px;
+  left: 105px;
+  width: 181px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+  font-size: 20px;
+  font-family: var(--font-playfair-display);
+}
+.div,
+.icon {
+  position: relative;
+}
+.icon {
+  width: 17.14px;
+  height: 17.14px;
+  object-fit: cover;
+}
+.div {
+  display: flex;
+  align-items: center;
+  width: 162px;
+  height: 9px;
+  flex-shrink: 0;
+}
+.logocontact {
+  position: absolute;
+  top: 84px;
+  left: 105px;
+  width: 181px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.logocontact,
+.logoemail {
+  display: flex;
+  align-items: center;
+}
+.logoemail {
+  position: relative;
+  width: 108px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.logoemail {
+  position: absolute;
+  top: 108px;
+  left: 105px;
+  width: 181px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.logolocation {
+  flex: 1;
+  position: relative;
+}
+.logolocation {
+  position: absolute;
+  top: 132px;
+  left: 105px;
+  width: 181px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.logowebsite {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 162px;
+  height: 11px;
+  flex-shrink: 0;
+}
+.logowebsite {
+  position: absolute;
+  top: 156px;
+  left: 105px;
+  width: 181px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.back12 {
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-burlywood-100);
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-burlywood-200);
+  font-family: var(--font-dm-serif-display);
+}
 
-    /* front css */
-    .wwwgooglecom {
-      position: relative;
-    }
+/* front css */
+.company-name,
+.tagline {
+  position: absolute;
+  left: calc(50% - 71px);
+  display: inline-block;
+  width: 141.71px;
+}
+.company-name {
+  top: 84px;
+  font-size: 28.5px;
+  font-weight: 600;
+  text-align: left;
+  height: 31.71px;
+}
+.tagline {
+  top: 118px;
+  font-weight: 500;
+  height: 12.86px;
+}
+.logo-icon1 {
+  position: absolute;
+  top: 43px;
+  left: calc(50% - 33px);
+  width: 66.67px;
+  height: 39.24px;
+  object-fit: cover;
+}
+.website {
+  position: absolute;
+  bottom: 21.14px;
+  left: calc(50% - 71px);
+  display: inline-block;
+  width: 141.71px;
+  height: 12.86px;
+}
+.front12 {
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-burlywood-100);
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-burlywood-200);
+  font-family: var(--font-playfair-display);
+}
 
-    .wwwgooglecom-wrapper {
-      position: absolute;
-      top: 159.67px;
-      left: 0;
-      border-radius: var(--br-11xs);
-      background-color: var(--color-darkslateblue);
-      border: 1px solid var(--color-gray);
-      box-sizing: border-box;
-      width: 300px;
-      height: 25px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 4px 0;
-    }
-
-    .logo-icon {
-      position: relative;
-      width: 57.14px;
-      height: 63.85px;
-      object-fit: cover;
-    }
-
-    .healthcare {
-      margin: 0;
-    }
-
-    .medical-servics {
-      margin: 0;
-      font-size: 10.29px;
-    }
-
-    .company {
-      position: relative;
-      display: inline-block;
-      width: 99.14px;
-      height: 10.29px;
-      flex-shrink: 0;
-    }
-
-    .logo-parent {
-      position: absolute;
-      top: 25px;
-      left: 41.23px;
-      width: 99.14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 8px;
-      font-size: 18.29px;
-    }
-
-    .icon {
-      position: relative;
-      width: 22.86px;
-      height: 22.86px;
-      object-fit: cover;
-    }
-
-    .parent {
-      opacity: 1;
-    }
-
-    .frame-parent,
-    .group,
-    .parent {
-      width: 96.29px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .frame-parent {
-      position: absolute;
-      top: 27.67px;
-      left: 179.14px;
-      flex-direction: column;
-      justify-content: center;
-      gap: 15.43px;
-    }
-
-    .front4 {
-      position: relative;
-      background-color: var(--color-mediumseagreen);
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      width: 300px;
-      height: 200px;
-      overflow: hidden;
-      cursor: pointer;
-      text-align: center;
-      font-size: 10.29px;
-      color: var(--color-white);
-      font-family: var(--font-amiko);
-    }
-
-    @media screen and (max-width: 1200px) {
-      .front4 {
-        height: 600px;
-        width: 1050px;
-      }
-    }
-
-    /* back css */
-    .icon3,
-    .icon7 {
-      position: relative;
-      width: 17.14px;
-      height: 17.14px;
-      object-fit: cover;
-    }
-
-    .frame-div {
-      position: absolute;
-      top: 0;
-      left: 137.14px;
-      border-radius: var(--br-11xs);
-      background-color: var(--color-darkslateblue);
-      border: 1px solid var(--color-gray);
-      box-sizing: border-box;
-      width: 22.86px;
-      height: 200px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-end;
-      padding: 0 2.5869998931884766px 30.66699981689453px;
-      gap: 11px;
-    }
-
-    .pranjal-padole {
-      margin: 0;
-    }
-
-    .manager {
-      margin: 0;
-      font-size: 6.86px;
-    }
-
-    .pranjal-padole-manager-container {
-      position: relative;
-      font-size: 10.29px;
-    }
-
-    .div {
-      position: relative;
-    }
-
-    .pranjal-padole-manager-parent {
-      position: absolute;
-      top: 0;
-      left: 160px;
-      border-radius: var(--br-11xs);
-      background-color: var(--color-mediumseagreen);
-      border: 1px solid var(--color-gray);
-      box-sizing: border-box;
-      width: 141.14px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 40px 8px 34px;
-      gap: 14px;
-    }
-
-    .icon8 {
-      position: relative;
-      width: 57.14px;
-      height: 60.79px;
-      object-fit: cover;
-    }
-
-    .medical-servics1 {
-      margin: 0;
-      font-size: 10.29px;
-    }
-
-    .healthcare-medical-servics-container {
-      align-self: stretch;
-      position: relative;
-    }
-
-    .parent1 {
-      position: absolute;
-      top: 41.14px;
-      left: 26.86px;
-      width: 99.14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: 18.29px;
-      color: var(--color-darkslateblue);
-    }
-
-    .back4 {
-      position: relative;
-      background-color: var(--color-white);
-      width: 300px;
-      height: 200px;
-      overflow: hidden;
-      opacity: 0.8;
-      cursor: pointer;
-      text-align: center;
-      font-size: 9.14px;
-      color: var(--color-white);
-      font-family: var(--font-amiko);
-    }
-
-    @media screen and (max-width: 300px) {
-      .icon7 {
-        height: 200px;
-      }
-
-      .back4 {
-        width: 300px;
-      }
-
-      .icon7 {
-        width: 300px;
-      }
-
-      .back4 {
-        height: 200px;
-      }
-    }
-
-    @media screen and (max-width: 300px) {
-      .icon7 {
-        width: 300px;
-      }
-
-      .back4 {
-        height: 200px;
-      }
-    }
   </style>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;700&display=swap" />
+  <!-- Include Google Fonts styles -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Serif Display:wght@400&display=swap" />
 
   
   {#if currentPage === "home"}
   <div class="business-card-container">
 	<div class="input-section">
-		<h3>Your Business Card:</h3>
-		<div class="form-group">
-		  <label for="company">Company:</label>
-		  <input type="text" id="company" bind:value={formData.company} placeholder="Your company" />
-		</div>
-		<div class="form-group">
-		  <label for="services">Services:</label>
-		  <input type="text" id="services" bind:value={formData.services} placeholder="Your tagline" />
-		</div>
-		<div class="form-group">
-		  <label for="website">Website:</label>
-		  <input type="text" id="website" bind:value={formData.website} placeholder="Your Website" />
-		</div>
-		<div class="form-group">
-		  <label for="name">Name:</label>
-		  <input type="text" id="name" bind:value={formData.name} placeholder="Your Name" />
-		</div>
-		<div class="form-group">
-		  <label for="designation">Designation:</label>
-		  <input type="text" id="designation" bind:value={formData.designation} placeholder="Your Designation" />
-		</div>
-		<div class="form-group">
-		  <label for="phoneNumber">Phone Number:</label>
-		  <input type="text" id="phoneNumber" bind:value={formData.phoneNumber} placeholder="Your Phone Number with Country Code" />
-		</div>
-		<div class="form-group">
-		  <label for="email">email:</label>
-		  <input type="text" id="email" bind:value={formData.email} placeholder="Your email" />
-		</div>
-		<div class="form-group">
-		  <label for="address">Address:</label>
-		  <input type="text" id="address" bind:value={formData.address} placeholder="Your Address" />
-		</div>
-		
-		<div class="button-section">
-		  <button on:click={submitForm}>Apply</button>
-		</div>
+	  <h3>Your Business Card:</h3>
+	  <div class="form-group">
+		<label for="company">Company:</label>
+		<input type="text" id="company" bind:value={formData.company} placeholder="Your company" />
 	  </div>
+	  <div class="form-group">
+		<label for="tagline">Tagline:</label>
+		<input type="text" id="tagline" bind:value={formData.tagline} placeholder="Your tagline" />
+	  </div>
+	  <div class="form-group">
+		<label for="website">Website:</label>
+		<input type="text" id="website" bind:value={formData.website} placeholder="Your Website" />
+	  </div>
+	  <div class="form-group">
+		<label for="name">Name:</label>
+		<input type="text" id="name" bind:value={formData.name} placeholder="Your Name" />
+	  </div>
+	  <div class="form-group">
+		<label for="designation">Designation:</label>
+		<input type="text" id="designation" bind:value={formData.designation} placeholder="Your Designation" />
+	  </div>
+	  <div class="form-group">
+		<label for="phoneNumber">Phone Number:</label>
+		<input type="text" id="phoneNumber" bind:value={formData.phoneNumber} placeholder="Your Phone Number with Country Code" />
+	  </div>
+	  <div class="form-group">
+		<label for="email">email:</label>
+		<input type="text" id="email" bind:value={formData.email} placeholder="Your email" />
+	  </div>
+	  <div class="form-group">
+		<label for="address">Address:</label>
+		<input type="text" id="address" bind:value={formData.address} placeholder="Your Address" />
+	  </div>
+	  
+	  <div class="button-section">
+		<button on:click={submitForm}>Apply</button>
+	  </div>
+	</div>
   
 	<div class="preview-section">
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front">
-		<div class="front4" id="frontContainer">
-			<div class="wwwgooglecom-wrapper">
-			  <div class="wwwgooglecom">{formData.website}</div>
-			</div>
-			<div class="logo-parent">
-			  <img class="logo-icon" alt="" src="./logo@2x.png" />
-		
-			  <div class="company">
-				<p class="healthcare">
-				  <b>{formData.company}</b>
-				</p>
-				<p class="medical-servics">{formData.services}</p>
-			  </div>
-			</div>
-			<div class="frame-parent">
-			  <div class="parent" data-animate-on-scroll>
-				<img class="icon" alt="" src="./10-1@2x.png" />
-		
-				<div class="wwwgooglecom">Emergency</div>
-			  </div>
-			  <div class="group">
-				<img class="icon" alt="" src="./11-1@2x.png" />
-		
-				<div class="wwwgooglecom">Vaccination</div>
-			  </div>
-			  <div class="group">
-				<img class="icon" alt="" src="./12-1@2x.png" />
-		
-				<div class="wwwgooglecom">Blood Test</div>
-			  </div>
-			</div>
+		<div class="front12" id="front1Container">
+			<div class="company-name">{formData.company}</div>
+			<div class="tagline">{formData.tagline}</div>
+			<img class="logo-icon1" alt="" src="./logo1@2x.png" />
+			<div class="website">{formData.website}</div>
 		  </div>
 	  </div>
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back">
-		<div class="back4" id="backContainer">
-			<div class="frame-div">
-			  <img class="icon3" alt="" src="./5-1@2x.png" />
-		
-			  <img class="icon3" alt="" src="./4-1@2x.png" />
-		
-			  <img class="icon3" alt="" src="./6-1@2x.png" />
-		
-			  <img class="icon3" alt="" src="./8-1@2x.png" />
-		
-			  <img class="icon7" alt="" src="./7-1@2x.png" />
+		<div class="back12" id="back1Container">
+			<div class="back12-child"></div>
+			<img class="logo-icon" alt="" src="./logo@2x.png" />
+			<div class="nameposition">
+			  <div class="james-bond">{formData.name}</div>
+			  <div class="product-manager">{formData.designation}</div>
 			</div>
-			<div class="pranjal-padole-manager-parent">
-			  <div class="pranjal-padole-manager-container">
-				<p class="pranjal-padole">{formData.name}</p>
-				<p class="manager">{formData.designation}</p>
-			  </div>
+			<div class="logocontact">
+			  <img class="icon" alt="" src="./5-1@2x.png" />
 			  <div class="div">{formData.phoneNumber}</div>
+			</div>
+			<div class="logoemail">
+			  <img class="icon" alt="" src="./6-1@2x.png" />
 			  <div class="div">{formData.email}</div>
-			  <div class="div">{formData.website}</div>
+			</div>
+			<div class="logolocation">
+			  <img class="icon" alt="" src="./8-1@2x.png" />
 			  <div class="div">{formData.address}</div>
 			</div>
-			<div class="parent1">
-			  <img class="icon8" alt="" src="./3-1@2x.png" />
-		
-			  <div class="healthcare-medical-servics-container">
-				<p class="pranjal-padole">
-				  <b>{formData.company}</b>
-				</p>
-				<p class="medical-servics1">{formData.services}</p>
-			  </div>
+			<div class="logowebsite">
+			  <img class="icon" alt="" src="./7-1@2x.png" />
+			  <div class="div">{formData.website}</div>
 			</div>
 		  </div>
 	  </div>
@@ -533,77 +441,42 @@
 	  <p>Form Submitted!</p>
 	  <h3>Front Side:</h3>
 	  <div class="business-card-front" id="card-front">
-		<div class="front4" id="frontContainer">
-			<div class="wwwgooglecom-wrapper">
-			  <div class="wwwgooglecom">{formData.website}</div>
-			</div>
-			<div class="logo-parent">
-			  <img class="logo-icon" alt="" src="./logo@2x.png" />
-		
-			  <div class="company">
-				<p class="healthcare">
-				  <b>Healthcare</b>
-				</p>
-				<p class="medical-servics">{formData.name}</p>
-			  </div>
-			</div>
-			<div class="frame-parent">
-			  <div class="parent" data-animate-on-scroll>
-				<img class="icon" alt="" src="./10-1@2x.png" />
-		
-				<div class="wwwgooglecom">Emergency</div>
-			  </div>
-			  <div class="group">
-				<img class="icon" alt="" src="./11-1@2x.png" />
-		
-				<div class="wwwgooglecom">Vaccination</div>
-			  </div>
-			  <div class="group">
-				<img class="icon" alt="" src="./12-1@2x.png" />
-		
-				<div class="wwwgooglecom">Blood Test</div>
-			  </div>
-			</div>
+		<div class="front12" id="front1Container">
+			<div class="company-name">{formData.company}</div>
+			<div class="tagline">{formData.tagline}</div>
+			<img class="logo-icon1" alt="" src="./logo1@2x.png" />
+			<div class="website">{formData.website}</div>
 		  </div>
 	  </div>
 	  <h3>Reverse Side:</h3>
 	  <div class="business-card-back" id="card-back">
-		<div class="back4" id="backContainer">
-			<div class="frame-div">
-			  <img class="icon3" alt="" src="./5-1@2x.png" />
-		
-			  <img class="icon3" alt="" src="./4-1@2x.png" />
-		
-			  <img class="icon3" alt="" src="./6-1@2x.png" />
-		
-			  <img class="icon3" alt="" src="./8-1@2x.png" />
-		
-			  <img class="icon7" alt="" src="./7-1@2x.png" />
+		<div class="back12" id="back1Container">
+			<div class="back12-child"></div>
+			<img class="logo-icon" alt="" src="./logo@2x.png" />
+			<div class="nameposition">
+			  <div class="james-bond">{formData.name}</div>
+			  <div class="product-manager">{formData.designation}</div>
 			</div>
-			<div class="pranjal-padole-manager-parent">
-			  <div class="pranjal-padole-manager-container">
-				<p class="pranjal-padole">{formData.name}</p>
-				<p class="manager">{formData.designation}</p>
-			  </div>
+			<div class="logocontact">
+			  <img class="icon" alt="" src="./5-1@2x.png" />
 			  <div class="div">{formData.phoneNumber}</div>
+			</div>
+			<div class="logoemail">
+			  <img class="icon" alt="" src="./6-1@2x.png" />
 			  <div class="div">{formData.email}</div>
-			  <div class="div">{formData.website}</div>
+			</div>
+			<div class="logolocation">
+			  <img class="icon" alt="" src="./8-1@2x.png" />
 			  <div class="div">{formData.address}</div>
 			</div>
-			<div class="parent1">
-			  <img class="icon8" alt="" src="./3-1@2x.png" />
-		
-			  <div class="healthcare-medical-servics-container">
-				<p class="pranjal-padole">
-				  <b>{formData.company}</b>
-				</p>
-				<p class="medical-servics1">Medical Servics</p>
-			  </div>
+			<div class="logowebsite">
+			  <img class="icon" alt="" src="./7-1@2x.png" />
+			  <div class="div">{formData.website}</div>
 			</div>
 		  </div>
 	  </div>
 	  <button on:click={closePrompt}>Close</button>
-	  
+	
 	</div>
   </div>
   {/if}
