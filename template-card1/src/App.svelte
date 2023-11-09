@@ -384,6 +384,10 @@
 		<label for="name">Name:</label>
 		<input type="text" id="name" bind:value={formData.name} placeholder="Your Name" />
 	  </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" bind:value={formData.email} placeholder="Your email" />
+      </div>
 	  
 	  <div class="form-group">
 		<label for="address">Address:</label>
