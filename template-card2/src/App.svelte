@@ -1,6 +1,4 @@
 <script>
-	
-;
   // add ID for card-front card-back in promp container
 	let formData = {
 	  company: "Healthcare",
@@ -103,24 +101,17 @@
 	  align-items: center;
 	  justify-content: center;
 	}
-  
-	.preview-section .business-card-front:hover,
-	.preview-section .business-card-back:hover,
-	.prompt-content .business-card-front:hover,
-	.prompt-content .business-card-back:hover {
-	  background-color: lightcoral;
-	}
 
 	.prompt {
 	  position:fixed;
 	  top: 0;
 	  left: 0;
-	  width: 100%;
-	  height: 100%;
+	  width: 300px;
+	  height: 200px;
 	  display:flex;
 	  justify-content: center;
 	  align-items: center;
-	  background-color: rgba(0, 0, 0, 0.7);
+	  
 	}
   
 	.prompt-content {
